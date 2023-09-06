@@ -3,9 +3,9 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const CreateUser = () => {
-  const [name, setName] = useState();
-  const [email, setEmail] = useState();
-  const [age, setAge] = useState();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [age, setAge] = useState("");
   const navigate = useNavigate();
 
   const submit = (e) => {
@@ -20,12 +20,12 @@ const CreateUser = () => {
   };
 
   return (
-    <div className="p-5 h-screen bg-gray-100">
+    <div className="p-5 min-h-screen bg-gray-100">
       <div className="flex justify-center items-center h-full">
-        <div className="w-1/2 bg-white rounded p-3 shadow-lg">
+        <div className="w-full bg-white rounded p-4 shadow-lg">
           <form onSubmit={submit}>
-            <h1 className="text-xl font-semibold mb-3">Add User</h1>
-            <div className="mb-3">
+            <h1 className="text-2xl font-semibold mb-4">Add User</h1>
+            <div className="mb-4">
               <label htmlFor="name" className="block text-sm font-medium text-gray-600">
                 Name
               </label>
@@ -37,7 +37,7 @@ const CreateUser = () => {
                 onChange={(e) => setName(e.target.value)}
               />
             </div>
-            <div className="mb-3">
+            <div className="mb-4">
               <label htmlFor="email" className="block text-sm font-medium text-gray-600">
                 Email
               </label>
@@ -49,7 +49,7 @@ const CreateUser = () => {
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
-            <div className="mb-3">
+            <div className="mb-4">
               <label htmlFor="age" className="block text-sm font-medium text-gray-600">
                 Age
               </label>
@@ -61,7 +61,7 @@ const CreateUser = () => {
                 onChange={(e) => setAge(e.target.value)}
               />
             </div>
-            <button className="px-4 py-2 bg-green-500 text-white rounded-lg shadow-md hover:bg-green-600">
+            <button className="bg-green-500 text-white rounded-lg px-4 py-2 hover:bg-green-600">
               Create User
             </button>
           </form>

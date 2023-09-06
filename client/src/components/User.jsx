@@ -27,7 +27,10 @@ const User = () => {
     <div className="p-5 h-screen bg-gray-100">
       <div className="overflow-auto rounded-lg shadow">
         <div className="w-full bg-white rounded p-3">
-          <Link to="/create" className="px-2 py-1 bg-yellow-400 rounded shadow text-white">
+          <Link
+            to="/create"
+            className="bg-yellow-400 px-4 py-2 rounded shadow-md text-white hover:bg-yellow-500 mb-4"
+          >
             Add +
           </Link>
           <table className="w-full">
@@ -51,15 +54,9 @@ const User = () => {
               {user.map((user) => {
                 return (
                   <tr key={user._id}>
-                    <td className="p-3 text-sm text-gray-700">
-                      {user.name}
-                    </td>
-                    <td className="p-3 text-sm text-gray-700">
-                      {user.email}
-                    </td>
-                    <td className="p-3 text-sm text-gray-700">
-                      {user.age}
-                    </td>
+                    <td className="p-3 text-sm text-gray-700">{user.name}</td>
+                    <td className="p-3 text-sm text-gray-700">{user.email}</td>
+                    <td className="p-3 text-sm text-gray-700">{user.age}</td>
                     <td className="p-3">
                       <Link
                         to={`/update/${user._id}`}
