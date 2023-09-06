@@ -32,42 +32,53 @@ const UpdateUser = () => {
   };
 
   return (
-    <div>
-      <div className="flex h-full bg-red-100 justify-center items-center">
-        <div className="w-50 bg-white rounded p-3">
+    <div className="p-5 h-screen bg-gray-100">
+      <div className="flex justify-center items-center h-full">
+        <div className="w-1/2 bg-white rounded p-3 shadow-lg">
           <form onSubmit={update}>
-            <h1>Update User</h1>
-            <div className="mb-2">
-              <label htmlFor="">Name</label>
+            <h1 className="text-xl font-semibold mb-3">Update User</h1>
+            <div className="mb-3">
+              <label htmlFor="name" className="block text-sm font-medium text-gray-600">
+                Name
+              </label>
               <input
                 type="text"
+                id="name"
                 placeholder="Enter Your Name"
-                className="form-control"
+                className="form-input w-full rounded-md shadow-sm"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
               />
             </div>
-            <div className="mb-2">
-              <label htmlFor="">Email</label>
+            <div className="mb-3">
+              <label htmlFor="email" className="block text-sm font-medium text-gray-600">
+                Email
+              </label>
               <input
                 type="email"
+                id="email"
                 placeholder="Enter Your Email"
-                className="form-control"
+                className="form-input w-full rounded-md shadow-sm"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
-            <div className="mb-2">
-              <label htmlFor="">Age</label>
+            <div className="mb-3">
+              <label htmlFor="age" className="block text-sm font-medium text-gray-600">
+                Age
+              </label>
               <input
                 type="text"
+                id="age"
                 placeholder="Enter Your Age"
-                className="form-control"
+                className="form-input w-full rounded-md shadow-sm"
                 value={age}
                 onChange={(e) => setAge(e.target.value)}
               />
             </div>
-            <button className="btn btn-success">Success</button>
+            <button className="px-4 py-2 bg-green-500 text-white rounded-lg shadow-md hover:bg-green-600">
+              Update User
+            </button>
           </form>
         </div>
       </div>

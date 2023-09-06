@@ -24,10 +24,10 @@ const User = () => {
   };
 
   return (
-    <div className="p-5 h-screen bg-gray-100 ">
+    <div className="p-5 h-screen bg-gray-100">
       <div className="overflow-auto rounded-lg shadow">
         <div className="w-full bg-white rounded p-3">
-          <Link to="/create" className="px-2 py-1 bg-yellow-400 rounded shadow">
+          <Link to="/create" className="px-2 py-1 bg-yellow-400 rounded shadow text-white">
             Add +
           </Link>
           <table className="w-full">
@@ -51,24 +51,24 @@ const User = () => {
               {user.map((user) => {
                 return (
                   <tr key={user._id}>
-                    <td className="p-3 text-sm text-sm text-gray-700">
+                    <td className="p-3 text-sm text-gray-700">
                       {user.name}
                     </td>
-                    <td className="p-3 text-sm text-sm text-gray-700">
+                    <td className="p-3 text-sm text-gray-700">
                       {user.email}
                     </td>
-                    <td className="p-3 text-sm text-sm text-gray-700">
+                    <td className="p-3 text-sm text-gray-700">
                       {user.age}
                     </td>
-                    <td className="p-3 text-sm text-sm text-gray-700">
+                    <td className="p-3">
                       <Link
                         to={`/update/${user._id}`}
-                        className="btn btn-success"
+                        className="bg-green-500 text-white rounded px-2 py-1 mr-2 hover:bg-green-600"
                       >
                         Update
                       </Link>
                       <button
-                        className="btn btn-danger"
+                        className="bg-red-500 text-white rounded px-2 py-1 hover:bg-red-600"
                         onClick={(e) => handleDelete(user._id)}
                       >
                         Delete
