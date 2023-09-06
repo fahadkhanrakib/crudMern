@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const User = () => {
   const [user, setUser] = useState([]);
@@ -29,7 +29,7 @@ const User = () => {
         <div className="w-full bg-white rounded p-3">
           <Link
             to="/create"
-            className="bg-yellow-400 px-4 py-2 rounded shadow-md text-white hover:bg-yellow-500 mb-4"
+            className="bg-green-500 px-4 py-2 rounded shadow-md text-white hover:bg-green-600 mb-4"
           >
             Add +
           </Link>
